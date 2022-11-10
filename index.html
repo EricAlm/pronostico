@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Clima</title>
+</head>
+<body>
+    <header class="mb-4 pb-4 d-flex flex-column justify-content-around">
+      <div class="container pt-4 mb-2 text-center">
+        <h1>PRONÓSTICO</h1>
+      </div>
+      <div class="container mb-4 pt-4">
+        <div class="row justify-content-center">
+          <div class="col-6 searchbar">
+            <input class="search_input" type="text" name="" placeholder="Buscar provincia...">
+          </div>
+          <div class="col-2 row align-items-center m-2">
+            <button class="search_icon"><i class="fas fa-search"></i></button> 
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row row-cols-2 row-cols-xl-3">
+          <div class="col d-flex flex-column align-items-center">
+            <h1>New York</h1>
+            <p>Martes 15 de Noviembre</p>
+            <img src="https://raw.githubusercontent.com/Makin-Things/weather-icons/master/animated/cloudy-2-day.svg" alt="clima-soleado" height="250px">
+          </div>
+          <div class="col d-flex flex-column align-items-center">
+            <h2>Soleado</h2>
+            <p class="grados">24°</p>
+            <div class="row">
+              <p class="col-auto">Max: 27°</p>
+              <p class="col-auto">Min: 12°</p>
+            </div>
+          </div>
+          <div class="col chart-container">
+            <canvas id="grafico-clima" height="215"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="container info-clima p-3">
+        <div class="row text-center">
+          <div class="col">
+            <i class="fa-solid fa-umbrella fa-xl"></i>
+            <p class="m-3">data1</p>
+            <p>Precipitación</p>
+          </div>
+          <div class="col">
+            <i class="fa-solid fa-droplet fa-xl"></i>
+            <p class="m-3">data2</p>
+            <p>Humedad</p>
+          </div>
+          <div class="col">
+            <i class="fa-solid fa-wind fa-xl"></i>
+            <p class="m-3">data3</p>
+            <p>Viento</p>
+          </div> 
+        </div>
+      </div>
+     
+    </header>
+    
+    <main>
+
+      <div class="container mb-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-md-3 g-4 card-group justify-content-center">
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header">
+                Lunes
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">ICONO</h5>
+                <p class="card-text">Maxima</p>
+                <p class="card-text">Minima</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header">
+                Martes
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">ICONO</h5>
+                <p class="card-text">Maxima</p>
+                <p class="card-text">Minima</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header">
+                Miercoles
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">ICONO</h5>
+                <p class="card-text">Maxima</p>
+                <p class="card-text">Minima</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header">
+                Jueves
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">ICONO</h5>
+                <p class="card-text">Maxima</p>
+                <p class="card-text">Minima</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header">
+                Viernes
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">ICONO</h5>
+                <p class="card-text">Maxima</p>
+                <p class="card-text">Minima</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header">
+                Sabado
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">ICONO</h5>
+                <p class="card-text">Maxima</p>
+                <p class="card-text">Minima</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header">
+                Domingo
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">ICONO</h5>
+                <p class="card-text">Maxima</p>
+                <p class="card-text">Minima</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/grafico-clima.js"></script>
+    <script src="./js/bootstrap/bootstrap.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
