@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
     <title>Clima</title>
 </head>
@@ -17,28 +17,28 @@
       </div>
       <div class="container mb-4 pt-4">
         <div class="row justify-content-center">
-          <div class="col-6 searchbar">
-            <input class="search_input" type="text" name="" placeholder="Buscar provincia...">
+          <div class="col-6 ">
+            <!-- <input class="search_input" type="text" name="" placeholder="Buscar provincia..."> -->
+            <select name="prov_options" id="prov_options" class="form-control searchbar" onchange="climaProvincia(event.target)">
+              
+            </select>
           </div>
-          <div class="col-2 row align-items-center m-2">
+          <!-- <div class="col-2 row align-items-center m-2">
             <button class="search_icon"><i class="fas fa-search"></i></button> 
-          </div>
+          </div> -->
         </div>
       </div>
 
       <div class="container">
         <div class="row row-cols-2 row-cols-xl-3">
-          <div class="col d-flex flex-column align-items-center">
-            <h1>New York</h1>
-            <p>Martes 15 de Noviembre</p>
-            <img src="https://raw.githubusercontent.com/Makin-Things/weather-icons/master/animated/cloudy-2-day.svg" alt="clima-soleado" height="250px">
+          <div id="datos_provincia" class="col d-flex flex-column align-items-center">
+         
           </div>
           <div class="col d-flex flex-column align-items-center">
-            <h2>Soleado</h2>
-            <p class="grados">24°</p>
+            <p class="grados" id="temperatura_actual"></p>
             <div class="row">
-              <p class="col-auto">Max: 27°</p>
-              <p class="col-auto">Min: 12°</p>
+              <p class="col-auto" id="tempMax"></p>
+              <p class="col-auto" id="tempMin"></p>
             </div>
           </div>
           <div class="col chart-container">
@@ -51,17 +51,17 @@
         <div class="row text-center">
           <div class="col">
             <i class="fa-solid fa-umbrella fa-xl"></i>
-            <p class="m-3">data1</p>
+            <p class="m-3" id="lluvia"></p>
             <p>Precipitación</p>
           </div>
           <div class="col">
             <i class="fa-solid fa-droplet fa-xl"></i>
-            <p class="m-3">data2</p>
-            <p>Humedad</p>
+            <p class="m-3" id="sens_term"></p>
+            <p>Sensación Térmica</p>
           </div>
           <div class="col">
             <i class="fa-solid fa-wind fa-xl"></i>
-            <p class="m-3">data3</p>
+            <p class="m-3" id="wind"></p>
             <p>Viento</p>
           </div> 
         </div>
