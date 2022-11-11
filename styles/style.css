@@ -3,23 +3,21 @@
 p{ 
     margin: 0;
     color:rgb(255, 255, 255);
+    font-size: 1.5rem;
 }
 
-body{
-    background-color: #e0e7f7bb;
-}
+body{ background-color: #e0e7f7bb; }
 
 header{
     border-bottom: thick double #32a1ce;
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
-    /* background-color: rgb(21, 200, 245); */
     background-color: rgb(64, 214, 251);
 }
 
-.home{
-    height: 100vh;
-}
+.card-title{ color: #000; }
+
+.card-text{ font-size: 1rem; }
 
 .searchbar{ 
     background-color: #8b9bbe6b;
@@ -32,47 +30,17 @@ header{
     color: rgb(34, 108, 193);
     border: 0;
     outline: 0;
-    background: none;
-    
+    background: none;  
     line-height: 40px;
 }
 
-.search_icon:hover{
-    background: rgba(122, 132, 237, 0.631);
-    color: #020203;
-}
-    
-.search_icon{
-    height: 40px;
-    width: 40px;
-    border-radius: 30%;
-    background: rgba(59, 75, 255, 0.631);
-    color: #120a3d;
-}
-
-/* .search-prov{
-    background-color: #8b9bbe6b;
-    border: none;
-} */
-
-.grados{ font-size: 120px; }
+.grados{ font-size: 5rem; }
 
 .info-clima{
     background-color: #35a2bd79;
     border-radius: 50px;
 }
 
-.chart-container {
-    margin: auto;
-    height: 300px;
-}
-
 .card-text{
     color: #000;
 }
-
-@media only screen and (max-width: 1200px){
-    .chart-container {
-        display: none;
-    }
-} 

@@ -15,55 +15,27 @@
       <div class="container pt-4 mb-2 text-center">
         <h1>PRONÓSTICO</h1>
       </div>
+
       <div class="container mb-4 pt-4">
         <div class="row justify-content-center">
-          <div class="col-6 ">
-            <!-- <input class="search_input" type="text" name="" placeholder="Buscar provincia..."> -->
-            <select name="prov_options" id="prov_options" class="form-control searchbar" onchange="climaProvincia(event.target)">
-              
-            </select>
+          <div class="col-8">
+            <select name="prov_options" id="prov_options" class="form-control searchbar" onchange="climaProvincia(event.target)"></select>
           </div>
-          <!-- <div class="col-2 row align-items-center m-2">
-            <button class="search_icon"><i class="fas fa-search"></i></button> 
-          </div> -->
         </div>
       </div>
 
       <div class="container">
-        <div class="row row-cols-2 row-cols-xl-3">
+        <div class="row row-cols-1 row-cols-sm-2">
           <div id="datos_provincia" class="col d-flex flex-column align-items-center">
-         
           </div>
-          <div class="col d-flex flex-column align-items-center">
-            <p class="grados" id="temperatura_actual"></p>
-            <div class="row">
-              <p class="col-auto" id="tempMax"></p>
-              <p class="col-auto" id="tempMin"></p>
-            </div>
-          </div>
-          <div class="col chart-container">
-            <canvas id="grafico-clima" height="215"></canvas>
+          <div id="temperatura_actual" class="col d-flex flex-column align-items-center mb-4">
+
           </div>
         </div>
       </div>
 
-      <div class="container info-clima p-3">
-        <div class="row text-center">
-          <div class="col">
-            <i class="fa-solid fa-umbrella fa-xl"></i>
-            <p class="m-3" id="lluvia"></p>
-            <p>Precipitación</p>
-          </div>
-          <div class="col">
-            <i class="fa-solid fa-droplet fa-xl"></i>
-            <p class="m-3" id="sens_term"></p>
-            <p>Sensación Térmica</p>
-          </div>
-          <div class="col">
-            <i class="fa-solid fa-wind fa-xl"></i>
-            <p class="m-3" id="wind"></p>
-            <p>Viento</p>
-          </div> 
+      <div class="container info-clima p-3 m-auto">
+        <div id="caracteristicas_dia" class="row text-center">
         </div>
       </div>
      
@@ -71,104 +43,14 @@
     
     <main>
 
-      <div class="container mb-4">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-md-3 g-4 card-group justify-content-center">
-          <div class="col">
-            <div class="card text-center">
-              <div class="card-header">
-                Lunes
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">ICONO</h5>
-                <p class="card-text">Maxima</p>
-                <p class="card-text">Minima</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card text-center">
-              <div class="card-header">
-                Martes
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">ICONO</h5>
-                <p class="card-text">Maxima</p>
-                <p class="card-text">Minima</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card text-center">
-              <div class="card-header">
-                Miercoles
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">ICONO</h5>
-                <p class="card-text">Maxima</p>
-                <p class="card-text">Minima</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card text-center">
-              <div class="card-header">
-                Jueves
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">ICONO</h5>
-                <p class="card-text">Maxima</p>
-                <p class="card-text">Minima</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card text-center">
-              <div class="card-header">
-                Viernes
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">ICONO</h5>
-                <p class="card-text">Maxima</p>
-                <p class="card-text">Minima</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card text-center">
-              <div class="card-header">
-                Sabado
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">ICONO</h5>
-                <p class="card-text">Maxima</p>
-                <p class="card-text">Minima</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card text-center">
-              <div class="card-header">
-                Domingo
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">ICONO</h5>
-                <p class="card-text">Maxima</p>
-                <p class="card-text">Minima</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div id="panel_secundario" class="container mb-4">
+        <div id="cards" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 card-group justify-content-center">
+        </div>  
       </div>
     </main>
 
-    <script src="./js/grafico-clima.js"></script>
     <script src="./js/bootstrap/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
