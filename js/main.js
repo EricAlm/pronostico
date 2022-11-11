@@ -7,7 +7,7 @@ function getLatLongProvincias(){
     .then(res => res.json())
     .then(data => {
         Swal.close();
-        caracteristicas_dia.innerHTML += `<h3>-- BIENVENIDO AL CONSULTOR DE PRONÓSTICO DE ARGENTINA --</h3>`;
+        caracteristicas_dia.innerHTML += `<h3> Bienvenido a la app del clima en Argentina </h3>`;
         panel_secundario.innerHTML += `
         <div id="bandera" class="d-flex justify-content-center align-items-center mt-4">
             <img src="./img/bandera.jpg" alt="bandera Argentina" width="50%" heigth="100"></img>
